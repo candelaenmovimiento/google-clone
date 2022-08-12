@@ -17,9 +17,10 @@ export const ResultContextProvider = ({children}) => {
         "X-User-Agent": "desktop",
         "X-RapidAPI-Key": import.meta.env.VITE_API_KEY,
         "X-RapidAPI-Host": "google-search3.p.rapidapi.com",
-      },
-    });
-    const data = await response.json();
+      }
+    })
+
+    const data = await response.json()
 
     if(type.includes("/news")) {
       setResults (data.entries);
