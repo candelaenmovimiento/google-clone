@@ -14,7 +14,7 @@ export const Results = () => {
       if (location.pathname === "/videos") {
         getResults(`/search/q=${searchTerm} videos`);
       } else {
-        getResults(`${location.pathname}/q={searchTerm}&num=40`);
+        getResults(`${location.pathname}/q=${searchTerm}&num=40`);
       }
     }
   }, [searchTerm, location.pathname]);
@@ -22,6 +22,7 @@ export const Results = () => {
   if (loading) return <Loading />;
 
   switch (location.pathname) {
+
     case "/search":
       return (
         <div className="flex flex-wrap justify-between space-y-6 sm:px-56">
@@ -39,6 +40,7 @@ export const Results = () => {
           ))}
         </div>
       );
+
     case "/images":
       return (
         <div className="flex flex-wrap justify-center items-center">
@@ -58,6 +60,7 @@ export const Results = () => {
           )}
         </div>
       );
+
     case "/news":
       return (
         <div className="sm:px-56 flex flex-wrap justify-between items-center space-y-6">
@@ -67,7 +70,7 @@ export const Results = () => {
                 href={links?.[0].href}
                 target="_blank"
                 rel="noreferrer "
-                className="hover:underline "
+                className="hover:underline"
               >
                 <p className="text-lg dark:text-blue-300 text-blue-700">
                   {title}
@@ -88,6 +91,7 @@ export const Results = () => {
           ))}
         </div>
       );
+      
     case "/videos":
       return (
         <div className="flex flex-wrap ">
