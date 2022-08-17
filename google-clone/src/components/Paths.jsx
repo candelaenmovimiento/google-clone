@@ -12,7 +12,6 @@ export const Paths = () => {
         <Route exact path="/news" element={<Results />} />
         <Route exact path="/videos" element={<Results />} />
       </Routes>
-      <Results />
     </div>
   );
 };

@@ -22,7 +22,6 @@ export const Results = () => {
   if (loading) return <Loading />;
 
   switch (location.pathname) {
-
     case "/search":
       return (
         <div className="flex flex-wrap justify-between space-y-6 sm:px-56">
@@ -83,7 +82,6 @@ export const Results = () => {
                   rel="noreferrer"
                   className="hover:underline hover:text-blue-300"
                 >
-                  {" "}
                   {source?.href}
                 </a>
               </div>
@@ -110,5 +108,5 @@ export const Results = () => {
 
     default:
       return "Error...";
-  }
+  };
 };
